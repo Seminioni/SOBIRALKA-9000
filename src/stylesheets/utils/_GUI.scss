@@ -1,0 +1,78 @@
+// GUI styles
+.h1 {
+  // @extend .f-weight-light;
+  // @include rhythm(36, 36);
+}
+
+.h2 {
+  // @extend .f-weight-light;
+  // @include rhythm(30, 36);
+}
+
+.h3 {
+  // @extend .f-weight-light;
+  // @include rhythm(24, 27);
+}
+
+.h4 {
+  // @extend .f-weight-light;
+  // @include rhythm(18, 18);
+}
+
+.f-weight-light {
+  font-weight: 300;
+}
+
+.f-weight-normal {
+  font-weight: 400;
+}
+
+.f-style-italic {
+  font-style: italic;
+}
+
+.sprite,
+.link-as-icon {
+  display: inline-block;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.icon-cross {
+  height: 25px;
+  position: absolute;
+  width: 25px;
+
+  &:after,
+  &:before {
+    background-color: var(--c-black);
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    @media (--m) {
+      @include setTransitionFor(0.2s, background);
+      background-color: var(--c-black);
+    }
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      background-color: var(--с-black);
+    }
+  }
+}
