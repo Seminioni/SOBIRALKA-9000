@@ -65,4 +65,3 @@ typings/
 dist
 .cache
 .DS_Store
-src/html
