@@ -1,1 +1,9 @@
-module.exports = (tasks) =>  tasks.filter(task => (task === false || task === null || task === undefined))
+module.exports = function(tasks) {
+  return tasks.filter(task => {
+    if (task === false || task === null || task === undefined) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+};
