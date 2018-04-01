@@ -1,17 +1,26 @@
 {
   "name": "sobiratel",
   "version": "1.0.1",
-  "repository": "",
   "author": "Seminioni <seminioni@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "gulp",
+    "gulp": "gulp",
     "build": "cross-env NODE_ENV=production gulp build",
     "deploy": "yarn build && surge -p ./public -d sobiratel.surge.sh"
   },
+  "engines": {
+    "node": ">=6.11.1",
+    "npm": ">=3.10.3"
+  },
+  "homepage": "https://github.com/seminioni/sobiratel",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seminioni/sobiratel.git"
+  },
   "main": "gulpfile.js/index.js",
   "bin": {
-    "blendid": "bin/blendid.js"
+    "sobiratel": "bin/sobiratel.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -64,8 +73,5 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.19.1"
   },
-  "browserslist": [
-    "> 1%",
-    "last 3 versions"
-  ]
+  "browserslist": ["> 1%", "last 3 versions"]
 }

@@ -8,11 +8,11 @@ gulp.task('init', function() {
   const srcStream = gulp.src(['src/**/*', 'src/**/.gitkeep'])
     .pipe(gulp.dest(projectPath(PATH_CONFIG.src)))
 
-  log(colors.green('Generating default Blendid project files'))
+  log(colors.green('Generating default Sobiratel project files'))
   log(colors.yellow(`
 To start the dev server:
 `), colors.magenta(`
-yarn run blendid
+yarn run sobiratel
 `))
 
   return merge(defaultStream, configStream, srcStream)
