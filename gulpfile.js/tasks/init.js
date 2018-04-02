@@ -19,7 +19,7 @@ gulp.task("init", function() {
 To start the dev server:
 `),
     colors.magenta(`
-yarn run sobiratel=
+yarn run sobiratel
 `)
   );
 
