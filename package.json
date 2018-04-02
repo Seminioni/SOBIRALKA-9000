@@ -22,8 +22,7 @@
   "bin": {
     "sobiratel": "bin/sobiratel.js"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -73,6 +72,8 @@
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.19.1"
+  },
+  "devDependencies": {
   },
   "browserslist": [
     "> 1%",
