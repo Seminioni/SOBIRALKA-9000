@@ -6,6 +6,9 @@ const blendidEntryDir = path.resolve(__dirname, '../gulpfile.js')
 const gulpModulePath = path.dirname(require.resolve('gulp'))
 const gulpBinaryFile = path.join(gulpModulePath, '/bin/gulp')
 
+console.log("this is adds args", additionalArgs)
+console.log("this is blendidEntryDirn", blendidEntryDir)
+
 let args = ['--gulpfile', blendidEntryDir]
 
 if(additionalArgs.length) {
