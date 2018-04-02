@@ -30,6 +30,7 @@ const watchTask = function() {
     }
   }
 
+  // TODO: переписать байндинг вотчера для файлов: вынести логику из forEach и оставить только gulp.watch
   watchableTasks.forEach(function(taskName) {
     let srcPath,
       globPatter = undefined;
