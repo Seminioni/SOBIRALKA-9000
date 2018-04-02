@@ -5,6 +5,10 @@ const projectPath = require('../lib/projectPath')
 const merge = require('merge-stream')
 
 gulp.task('init', function() {
+
+  const configStream = gulp.src(['gulpfile.js/path-config.json', 'gulpfile.js/task-config.js'])
+    .pipe(gulp.dest(projectPath('config')))
+
   const srcStream = gulp.src(['src/**/*', 'src/**/.gitkeep'])
     .pipe(gulp.dest(projectPath(PATH_CONFIG.src)))
 
@@ -15,5 +19,5 @@ To start the dev server:
 yarn run sobiratel
 `))
 
-  return merge(defaultStream, configStream, srcStream)
+  return merge(configStream, srcStream)
 })
