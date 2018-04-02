@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const path = require("path");
 const watch = require("gulp-watch");
-const projectPath = require('../lib/projectPath')
 
 const watchTask = function() {
   global.watch = true;
@@ -38,7 +37,7 @@ const watchTask = function() {
     const taskPath = getTaskPathFor(taskName);
 
     try {
-      srcPath = projectPath(PATH_CONFIG.src, taskPath.src);
+      srcPath = path.join(PATH_CONFIG.src, taskPath.src);
 
       globPattern =
         "**/*" +
