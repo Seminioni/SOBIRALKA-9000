@@ -3,6 +3,7 @@ const data = require("gulp-data");
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
 const handleErrors = require("../lib/handleErrors");
+const projectPath = require("../lib/projectPath");
 const htmlmin = require("gulp-htmlmin");
 const path = require("path");
 const pug = require("gulp-pug");
