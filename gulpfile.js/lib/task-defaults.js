@@ -1,6 +1,8 @@
 const os = require("os");
 const path = require("path");
-const pkg = require(path.resolve(process.env.PWD, "package.json"));
+const projectPath = require("../lib/projectPath");
+
+const pkg = require(projectPath(process.env.PWD, "package.json"));
 
 module.exports = {
   javascripts: {
